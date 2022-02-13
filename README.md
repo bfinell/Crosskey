@@ -1,6 +1,6 @@
 # Crosskey code test
 
-Docker image is available on docker hub, **docker pull bfinell/mortgage**
+Docker image is available on docker hub, **docker pull bfinell/mortgage:mortgage**
 Navigate to root and **run docker-compose up** web interface runs on http://localhost:8080/mortgagePage
 
 The code reads the file and prints out the customers name and the monthly amount in the console.
