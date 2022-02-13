@@ -1,1 +1,9 @@
-# Crosskey
+# Crosskey code test
+
+To run the script navigate to the root folder and write ./mvnw spring-boot:run the web application should run on http://localhost:8080/mortgagePage
+
+The code reads the file and prints out the customers name and the monthly amount in the console.
+In the browser it is possible to add new customers and mortgages that will be shown on the same page.
+
+
+The project uses java 17, springboot and thymeleaf
