@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="eng">
+<head>
+    <title>Mortgage Calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/static/mortgagePage.css}" rel="stylesheet" />
+
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/mortgagePage}" th:object="${mortgagePage}" method="post">
+    <p>Name: <input type="text" th:field="*{costumer}" /> </p>
+    <p>Loan: <input type="number" th:field="*{total_loan}" /> </p>
+    <p>Interest: <input type="number" step=".01" th:field="*{interest_rate}" /> </p>
+    <p>Years: <input type="number" th:field="*{years}" /> </p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Clear" /></p>
+</form>
+<h2>Results:</h2>
+<h2 th:text="${mortgagePage.getCostumer()+'`s Loan'}"></h2>
+<h3 th:text="${'Payment Every Month '+mortgagePage.getMonthly_pay()+' €'}"></h3>
+<h3 th:text="${'Total of '+mortgagePage.getYears()*12+' payments'}"></h3>
+<h3 th:text="${'Total interest '+mortgagePage.getInterestToPay()+' €'}"></h3>
+</body>
+</html>
